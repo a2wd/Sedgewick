@@ -55,3 +55,49 @@ to manipulate *variables*, labelled with *identifiers*. We specify the values as
 *literals* and manipulate them with *operators*.
 
 `int someInt = 10 / 2;`
+
+Expressions are evaluated with precedence, same precedence operators are applied left
+to right, values can be implicitly cast as in `3 + 2.5`, `3` becomes `3.0`, or they
+can be explicitly case `(int) 3.0` becomes `3` (conversion to *int* truncates value).
+
+### Integers
+Java provides a standard 32-bit int alongside a 64-bit long, 16-bit short, 16-bit char
+8-bit byte, a 32-bit float and the 64-bit long.
+
+### Statements
+A Java program is made up of a series of statements: Declarations, Assignments,
+Conditionals, Loops, Calls and Returns.
+
+### Arrays
+An array stores a series of values of a type, zero-indexed and accessible by this index.
+An array can be made by:
+
+1. Declaring the array name and type.
+2. Creating the array.
+3. Initialising the array values
+
+See `ArrayBasics.java` for examples. Using the short-form initialises an
+array to zero.
+
+Array variables are *pointers* to the array in memory and multiple variables can
+be assigned to the same array. This is *aliasing*.
+
+Multi-dimensional arrays may be *ragged*, further array functions are defined as
+examples in the aforementioned `ArrayBasics.java`. The functions in this class are
+**static** methods, these can be called without instantiating the class.
+
+### Functions
+
+1. Arguments are passed by **value** (arrays as their pointer values)
+2. Method names can be overloaded (see *printArray* in `ArrayBasics.java`)
+3. A method has a single return value
+4. A method can have side-effects
+5. A method may use **recursion** and call itself.
+  a) For this a *base case* is needed
+  b) Each recursive call addresses a *sub-problem*
+  c) Each *sub-problem* must not overlap
+
+An example of a recursive implementation of **rank** is provided alongside the original
+in `BinarySearch.java`.
+
+## Basic programming model
