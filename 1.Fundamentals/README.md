@@ -101,3 +101,53 @@ An example of a recursive implementation of **rank** is provided alongside the o
 in `BinarySearch.java`.
 
 ## Basic programming model
+A program made up of at least one static function (main) and other static or instance
+classes and methods with optional data-type definitions.
+
+This allows for **modular programming** and **unit testing**. We build our programs
+with the *standard libraries* such as `Math` from `java.lang.*` these can be pulled
+in with an `import` statement.
+
+### APIs, Application Programming Interfaces
+A *client* can be written that calls an *implementation* of an *API* for example, in
+`ArrayBasics.java`, we have a client that calls the standard library implementation of
+`Math` whose **API** is given in the documentation.
+
+The purpose of an *API* is to separate the *client* from the *implementation*.
+
+## Strings
+We often use strings to deal with input/ouput to and from the console. We can use
+the built-in library functions of Integer and Double to transform strings to these
+respective primitives.
+
+Strings have a default concatenation operator `+`, as in `"a" + "b" = "ab"`. When
+any argument in such a sequence is a string, all the operators become converted to
+strings automatically.
+
+**args[]** is the argument passed to **main()** which contains the command line
+arguments.
+
+## Input and output
+We can visualise the Java program as a block that takes input (console, file, gui)
+and outputs to file, console and drawing.
+
+We can read from standard input with the **StdIn** wrapper around the Java standard
+input libraries and output to standard output with the respective **StdOut** wrapper.
+
+The accompanying `algs4.jar` library exposes these and other libraries with functions
+such as **printLn()** to print a string followed by the newline character or alternatively
+**printf()** for formatted printing using the Java-standard formatting strings (eg, %f).
+
+We can redirect and pipe input/output via the command line with the bash commands
+as noted in the instructions for the `BinarySearch` class above.
+
+Also provided in `algs4.jar` are **In** and **Out**, respective classes to read to
+and from the filesystem. In addition to these file and text based IO are StdDraw,
+a graphical output class.
+
+Examples of drawing are used to illustrate algorithms and formulae in `DrawingExamples.java`.
+
+## Binary Search
+The binary search algorithm is noted previously and implemented in `BinarySearch.java`.
+
+This is a *divide and conquer* algorithm which halves the problem area in each iteration.
