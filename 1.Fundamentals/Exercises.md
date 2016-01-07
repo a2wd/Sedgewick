@@ -75,3 +75,27 @@ What does the following program print?
 The printed output is 0, followed by the first 15 fibonacci numbers, each on a new line.
 
 ## 1.1.7
+What is the output of the following code fragments?
+1. 3.00009
+    double t = 9.0;
+    while (Math.abs(t - 9.0/t) > .001)
+      t = (9.0/t + t) / 2.0;
+    StdOut.printf("%.5f\n", t);
+2. 499500
+    int sum = 0;
+    for (int i = 1; i < 1000; i++)
+      for (int j = 0; j < i; j++)
+        sum++;
+    StdOut.println(sum);
+3. 1023
+    int sum = 0;
+    for (int i = 1; i < 1000; i = i * 2)
+      for (int j = 0; j < i; j++)
+        sum++;
+    StdOut.println(sum);
+
+## 1.1.8
+What do each of the following print? Explain each outcome.
+1. System.out.println('b'); `b \n`, the character 'b' is printed to screen.
+2. System.out.println('b' + 'c'); `197\n` the addition of 'b' and 'c' causes them to be coerced to integers and their integer value is displayed.
+3. System.out.println((char) ('a' + 4)); `e\n`, when 'a' is added to 4 it is coerced to an integer, but the `char` cast causes the computed value to be rendered as a character.
